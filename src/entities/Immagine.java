@@ -10,21 +10,21 @@ public class Immagine extends ElementoMultimediale implements Static, Visibile {
 
     @Override
     public void show() {
-        String[] volumeArr = new String[10];
+        String[] luminositaArr = new String[10];
         for (int i = 0; i < 10; i++) {
             if (i >= this.luminosita) {
-                volumeArr[i] = "";
+                luminositaArr[i] = "";
             } else {
-                volumeArr[i] = "*";
+                luminositaArr[i] = "*";
             }
         }
-        String showVolume = String.join("", volumeArr);
-        System.out.println(this.titolo + " " + showVolume);
+        String showLuminosita = String.join("", luminositaArr);
+        System.out.println(this.titolo + " " + showLuminosita);
     }
 
     @Override
     public void abbassaLuminosita() {
-        if (luminosita > 1) {
+        if (this.luminosita > 1) {
             this.luminosita--;
             System.out.println("Luminosità abbassata, la luminosità ora è " + this.luminosita);
         } else {
@@ -35,7 +35,7 @@ public class Immagine extends ElementoMultimediale implements Static, Visibile {
 
     @Override
     public void alzaLuminosita() {
-        if (luminosita < 10) {
+        if (this.luminosita < 10) {
             this.luminosita++;
             System.out.println("Luminosità alzata, la luminosità ora è " + this.luminosita);
         } else {
