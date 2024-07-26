@@ -6,7 +6,6 @@ public class Main {
         Video video = new Video("Oppenheimer");
         Audio audio = new Audio("Illusion");
 
-
         video.alzaVolume();
         video.play();
         img.abbassaLuminosita();
