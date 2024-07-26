@@ -19,7 +19,7 @@ public class Video extends ElementoMultimediale implements Riproducibile, Visibi
     @Override
     public void play() {
         for (int i = 0; i < this.durata; i++) {
-            System.out.println(this.titolo + " " + "!".repeat(Math.max(0, this.volume)) + " " + "*".repeat(Math.max(0, this.luminosita)));
+            System.out.println(this.titolo + " " + "!".repeat(this.volume) + " " + "*".repeat(this.luminosita));
         }
     }
 

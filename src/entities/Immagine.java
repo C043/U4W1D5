@@ -10,7 +10,7 @@ public class Immagine extends ElementoMultimediale implements Static, Visibile {
 
     @Override
     public void show() {
-        System.out.println(this.titolo + " " + "*".repeat(Math.max(0, this.luminosita)));
+        System.out.println(this.titolo + " " + "*".repeat(this.luminosita));
     }
 
     @Override
