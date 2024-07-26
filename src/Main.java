@@ -16,31 +16,35 @@ public class Main {
             String title = user.nextLine();
             if (title == "") {
                 System.out.println("Dovevi inserire un titolo, riprova.");
-                break;
+                i--;
+            } else {
+                switch (mediaType) {
+                    case "video":
+                        playlist[i] = new Video(title);
+                        break;
+                    case "audio":
+                        playlist[i] = new Audio(title);
+                        break;
+                    case "immagine":
+                        playlist[i] = new Immagine(title);
+                        break;
+                    default:
+                        System.out.println("Tipo di media inesistente, riprova.");
+                        i--;
+                        break;
+                }
             }
-            switch (mediaType) {
-                case "video" -> playlist[i] = new Video(title);
-                case "audio" -> playlist[i] = new Audio(title);
-                case "immagine" -> playlist[i] = new Immagine(title);
-                default -> System.out.println("Tipo di media inesistente, riprova.");
-            }
-            if (!mediaType.equals("video") && !mediaType.equals("audio") && !mediaType.equals("immagine")) break;
         }
 
         String input;
 
-        loopEsterno:
         do {
-            for (ElementoMultimediale elemento : playlist) {
-                if (elemento == null) {
-                    break loopEsterno;
-                }
-            }
             System.out.println("Okay, ora cosa vuoi riprodurre?");
             for (int i = 0; i < playlist.length; i++) {
                 System.out.println(i + 1 + " - " + playlist[i].getTitolo());
             }
             System.out.println("Premi il numero corrispondente per riprodurre o premi 0 per uscire.");
+
             input = user.nextLine();
 
             switch (input) {
