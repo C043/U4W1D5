@@ -30,7 +30,6 @@ public class Immagine extends ElementoMultimediale implements Static, Visibile {
         } else {
             System.out.println("Luminosità di " + this.titolo + " già al minimo!");
         }
-
     }
 
     @Override

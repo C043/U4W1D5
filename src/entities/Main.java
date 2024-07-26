@@ -25,12 +25,18 @@ public class Main {
 
         String input;
 
+        loopEsterno:
         do {
+            for (ElementoMultimediale elemento : playlist) {
+                if (elemento == null) {
+                    break loopEsterno;
+                }
+            }
             System.out.println("Okay, ora cosa vuoi riprodurre?");
             for (int i = 0; i < playlist.length; i++) {
                 System.out.println(i + 1 + " - " + playlist[i].titolo);
             }
-            System.out.println("Premi il numero corrispondente o premi 0 per uscire.");
+            System.out.println("Premi il numero corrispondente per riprodurre o premi 0 per uscire.");
             input = user.nextLine();
 
             switch (input) {
