@@ -1,9 +1,9 @@
 package entities;
 
 public abstract class ElementoMultimediale {
-    private String title;
+    private String titolo;
 
-    public ElementoMultimediale(String title) {
-        this.title = title;
+    public ElementoMultimediale(String titolo) {
+        this.titolo = titolo;
     }
 }
