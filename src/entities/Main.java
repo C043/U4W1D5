@@ -12,7 +12,7 @@ public class Main {
         for (int i = 0; i < 5; i++) {
             System.out.println(i + 1 + ". Cosa vuoi aggiungere alla playlist?");
             String mediaType = user.nextLine().toLowerCase();
-            System.out.println("Quale titolo?");
+            System.out.println("Titolo?");
             String title = user.nextLine();
             switch (mediaType) {
                 case "video" -> playlist[i] = new Video(title);
