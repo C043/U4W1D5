@@ -58,7 +58,7 @@ public class Video extends ElementoMultimediale implements Riproducibile, Visibi
     public void abbassaVolume() {
         if (this.volume > 1) {
             this.volume--;
-            System.out.println("Volume di " + this.titolo + " abbassata, il volume ora è " + this.volume);
+            System.out.println("Volume di " + this.titolo + " abbassato, il volume ora è " + this.volume);
         } else {
             System.out.println("Volume di " + this.titolo + " già al minimo!");
         }

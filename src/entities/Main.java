@@ -2,14 +2,13 @@ package entities;
 
 public class Main {
     public static void main(String[] args) {
-        Immagine img = new Immagine("Bella immagine");
-        Audio audio = new Audio("Daje");
-        Video video = new Video("Filmino");
+        Immagine img = new Immagine("La ragazza afagana");
+        Audio audio = new Audio("Houdini");
+        Video video = new Video("Barbie");
+        video.alzaVolume();
+        video.alzaVolume();
+        video.abbassaVolume();
 
-        for (int i = 0; i < 15; i++) {
-            video.alzaVolume();
-            video.alzaLuminosita();
-        }
 
         video.play();
     }
