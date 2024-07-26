@@ -4,11 +4,13 @@ public class Main {
     public static void main(String[] args) {
         Immagine img = new Immagine("Bella immagine");
         Audio audio = new Audio("Daje");
+        Video video = new Video("Filmino");
 
         for (int i = 0; i < 15; i++) {
-            audio.alzaVolume();
+            video.alzaVolume();
+            video.alzaLuminosita();
         }
 
-        audio.play();
+        video.play();
     }
 }

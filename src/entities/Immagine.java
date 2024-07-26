@@ -26,9 +26,9 @@ public class Immagine extends ElementoMultimediale implements Static, Visibile {
     public void abbassaLuminosita() {
         if (this.luminosita > 1) {
             this.luminosita--;
-            System.out.println("Luminosità abbassata, la luminosità ora è " + this.luminosita);
+            System.out.println("Luminosità di " + this.titolo + " abbassata, la luminosità ora è " + this.luminosita);
         } else {
-            System.out.println("Luminosità già al minimo!");
+            System.out.println("Luminosità di " + this.titolo + " già al minimo!");
         }
 
     }
@@ -37,9 +37,9 @@ public class Immagine extends ElementoMultimediale implements Static, Visibile {
     public void alzaLuminosita() {
         if (this.luminosita < 10) {
             this.luminosita++;
-            System.out.println("Luminosità alzata, la luminosità ora è " + this.luminosita);
+            System.out.println("Luminosità di " + this.titolo + " alzata, la luminosità ora è " + this.luminosita);
         } else {
-            System.out.println("Luminosità già al massimo!");
+            System.out.println("Luminosità di " + this.titolo + " già al massimo!");
         }
     }
 }
