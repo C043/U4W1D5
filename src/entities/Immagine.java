@@ -10,16 +10,7 @@ public class Immagine extends ElementoMultimediale implements Static, Visibile {
 
     @Override
     public void show() {
-        String[] luminositaArr = new String[10];
-        for (int i = 0; i < 10; i++) {
-            if (i >= this.luminosita) {
-                luminositaArr[i] = "";
-            } else {
-                luminositaArr[i] = "*";
-            }
-        }
-        String showLuminosita = String.join("", luminositaArr);
-        System.out.println(this.titolo + " " + showLuminosita);
+        System.out.println(this.titolo + " " + "*".repeat(Math.max(0, this.luminosita)));
     }
 
     @Override
