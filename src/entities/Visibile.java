@@ -1,8 +1,7 @@
 package entities;
 
 public interface Visibile {
-    public byte luminosita;
-    void abbassaLuminosita;
+    void abbassaLuminosita();
 
     void alzaLuminosita();
 }
