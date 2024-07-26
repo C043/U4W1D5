@@ -14,7 +14,7 @@ public class Main {
             String mediaType = user.nextLine().toLowerCase();
             System.out.println("Titolo?");
             String title = user.nextLine();
-            if (title == "") {
+            if (Objects.equals(title, "")) {
                 System.out.println("Dovevi inserire un titolo, riprova.");
                 i--;
             } else {
